@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+TxtMagic/__init__.py
+TxtMagic/colorify.py
+TxtMagic/emojify.py
+TxtMagic/fontify.py
+TxtMagic.egg-info/PKG-INFO
+TxtMagic.egg-info/SOURCES.txt
+TxtMagic.egg-info/dependency_links.txt
+TxtMagic.egg-info/top_level.txt
+tests/__init__.py
+tests/test_colorify.py
+tests/test_emojify.py
+tests/test_fontify.py

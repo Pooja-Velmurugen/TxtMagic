@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: TxtMagic
+Version: 0.1.0
+Summary: A Python package for adding style, emojis, and colors to your text effortlessly! 🎨✨
+Home-page: https://github.com/Pooja-Velmurugen
+Author: Pooja V
+Author-email: poojavelm@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+TxtMagic is a Python package designed to add magic to your text! With TextMagic, you can easily transform your text into colorful, emoji-filled, and stylized formats. 
