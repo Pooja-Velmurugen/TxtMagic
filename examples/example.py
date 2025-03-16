@@ -1,5 +1,5 @@
 
-from TxtMagic import color_text, rgb_colorify, rainbow_text, log_message ,emoji_text ,font_text 
+from TxtMagic import color_text, rgb_colorify, rainbow_text, background_colorify, log_message ,emoji_text ,font_text 
 
 # Example 1: Basic Text Coloring
 print("=== Example 1: Basic Text Coloring ===")
@@ -76,4 +76,20 @@ print(rgb_colorify(font_text("Hello, World!", style="circled_filled"), 255, 215,
 print(rainbow_text(font_text("Hello, World!", style="squared")))
 print(rgb_colorify(emoji_text("Let's have some pizza!"), 64, 224, 208 ))
 print(font_text(emoji_text("Let's have some pizza!"), style="cursive"))
+print()
+
+
+print("=== Example 8: Combining Features ===")
+
+"""
+Note : When using colorify, emojify, and fontify features simultaneously, it's important to 
+       follow the correct order of operations.
+       Apply emojis first to include them in the text, then apply font styles to transform the 
+       text, and finally add colors last to ensure the entire text
+"""
+
+text = emoji_text("I love Python and pizza!")
+styled_text = font_text(text, style="fraktur")
+colored_text = rgb_colorify(styled_text, 189, 252, 201)   # Mint
+print(colored_text)
 print()
