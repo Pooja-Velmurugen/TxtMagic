@@ -1,5 +1,6 @@
 
-from TxtMagic import color_text, rgb_colorify, rainbow_text, background_colorify, log_message ,emoji_text ,font_text 
+#from TxtMagic import color_text, rgb_colorify, rainbow_text, background_colorify, log_message ,emoji_text ,font_text 
+from TxtMagic import *
 
 # Example 1: Basic Text Coloring
 print("=== Example 1: Basic Text Coloring ===")
@@ -77,9 +78,20 @@ print(rainbow_text(font_text("Hello, World!", style="squared")))
 print(rgb_colorify(emoji_text("Let's have some pizza!"), 64, 224, 208 ))
 print(font_text(emoji_text("Let's have some pizza!"), style="cursive"))
 print()
+  
+print("=== Example 8: Emoji With Text=== ")
+print(add_emojis_With_text("I am very happy today!"))
+print(add_emojis_With_text("Lets have some pizza!"))
+print()
+
+print("=== Example 9: analyze_sentiment=== ")
+print(analyze_sentiment("This is a terrible day"))
+print(analyze_sentiment("I feel happy when i sing a songs"))
+print(analyze_sentiment("I hate Exams"))
+print()
 
 
-print("=== Example 8: Combining Features ===")
+print("=== Example 10: Combining Features ===")
 
 """
 Note : When using colorify, emojify, and fontify features simultaneously, it's important to 
@@ -88,8 +100,27 @@ Note : When using colorify, emojify, and fontify features simultaneously, it's i
        text, and finally add colors last to ensure the entire text
 """
 
-text = emoji_text("I love Python and pizza!")
+text = add_emojis_With_text("I love Python and pizza!")
 styled_text = font_text(text, style="fraktur")
 colored_text = rgb_colorify(styled_text, 189, 252, 201)   # Mint
 print(colored_text)
+print()
+
+
+print("=== Example 10:Demo of text animations:=== ")
+typing_animation("Hello, welcome to Python animations!")
+scrolling_text("Python makes animations fun!")
+glitch_effect("Glitchy Text!")
+color_cycle("Color Cycling")
+random_shuffle("Random Shuffle")
+rainbow_text_anime("Rainbow Text")
+text_shadow("Text Shadow")
+blinking_text("Blinking Text")
+text_gradient("Text Gradient")
+text_mirror("Text Mirror")
+text_fire("Text Fire")
+text_neon("Text Neon")
+text_wave("Text Wave")
+shadow_wave("Shadow Wave")
+text_3d("3D Text")
 print()

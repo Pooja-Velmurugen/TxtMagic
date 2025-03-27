@@ -9,7 +9,22 @@
 
 <li><b>Fontify: </b>Transform your text into various font styles (e.g., bold, cursive, subscript, etc.).</li>
 
+<li><b>Animations: </b>Transform your text into various Anime froms (e.g.,Typing animations , Scrolling text, wave effect, 3D text, etc.).</li>
+
 </br>
+
+## Version 0.1.0
+
+<li>Font styles bold, italic, cursive, script, fraktur and more.</li> 
+<li>text to emoji</li>
+<li>text color, Rgb colors, log msg, background color and rainbow gradients</li>
+
+## Version 0.1.1
+
+<li>Emoji with the text</li>
+<li>analyze sentiment emoji</li>
+<li>Animations(blinking_text, typing_animation,text_shadow, text_gradient and more)</li>
+
 
 <p> check out the <a href="examples/example.py">sample program</a> for more details</p> 
 

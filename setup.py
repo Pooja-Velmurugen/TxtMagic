@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="TxtMagic",
-    version="0.1.0",
+    version="0.1.1",
     author="Pooja V",
     author_email="poojavelm@gmail.com",
     description="A Python package for adding style, emojis, and colors to your text effortlessly! 🎨✨",

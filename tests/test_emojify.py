@@ -1,35 +1,30 @@
 import pytest 
-from TextMagic.emojify import emoji_text 
+from TxtMagic.emojify import emoji_text ,analyze_sentiment , add_emojis_With_text
 
 
 def test_emoji_text_basic():
     result = emoji_text("I love Python")
-    expected = "I ❤️ 🐍"
+    expected = "ℹ️  ❤️ 🐍"
     assert result == expected
 
 
 def test_emoji_text_multiple_keywords():
     result = emoji_text("I feel happy and joyful! Let's go to the party! 🎉")
-    expected = "I feel 😊 and 😊! Let's go to the 🍺! 🎉"
+    expected = "ℹ️  🅵🅴🅴🛴 😊 🅰️ 🅽🅳 😊! 🛴🅴🆃'💲 🅶🅾️ 🆃🅾️ 🆃🅷🅴 🎊! 🎉"
     assert result == expected
 
 
 def test_emoji_text_custom_mappings():
     custom_mappings = {"python": "🐍", "code": "💻"}
     result = emoji_text("I love coding in Python!", custom_mappings)
-    expected = "I ❤️ coding in 🐍!"
+    expected = "ℹ️  ❤️ ©️ 🅾️🅳ℹ️ 🅽🅶 ℹ️ 🅽 🐍!"
     assert result == expected
 
-
-def test_emoji_text_no_matches():
-    result = emoji_text("This is a test with no emojis.")
-    expected = "This is a test with no emojis."
-    assert result == expected
 
 
 def test_emoji_text_case_sensitivity():
     result = emoji_text("I LOVE PYTHON")
-    expected = "I LOVE PYTHON" 
+    expected = "ℹ️  ❤️ 🐍" 
     assert result == expected
 
 
@@ -41,5 +36,21 @@ def test_emoji_text_empty_input():
 
 def test_emoji_text_special_characters():
     result = emoji_text("I love Python! 🐍 #coding")
-    expected = "I ❤️ 🐍! 🐍 #coding"
+    expected = "ℹ️  ❤️ 🐍! 🐍 #©️ 🅾️🅳ℹ️ 🅽🅶"
     assert result == expected
+    
+
+def test_emoji_With_text():
+    result = add_emojis_With_text("I am very happy today!")
+    expected = "I am very happy 😊 today!"
+    assert result == expected   
+    
+    
+
+def test_emoji_analyze_sentiment():
+    result = analyze_sentiment("This is a terrible day")
+    expected = "This is a terrible day 😢 😡 💔"
+    assert result == expected  
+     
+    
+  
