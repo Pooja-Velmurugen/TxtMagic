@@ -15,4 +15,9 @@ setup(
         'License :: OSI Approved :: MIT License',
     ],
     python_requires='>=3.0',
+    install_requires=[
+        'textblob==0.17.1',
+        'nltk==3.8.1',
+        'rich==13.7.0'
+    ]
 )
