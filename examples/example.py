@@ -48,9 +48,9 @@ print()
 
 # Example 5: Emoji Replacement
 print("=== Example 5: Emoji Replacement ===")
-print(emoji_text("I love Python"))  # Output: I ❤️🐍
-print(emoji_text("Let's have some pizza!"))  # Output: Let's have some 🍕!
-print(emoji_text("I feel happy and joyful!"))  # Output: I feel 😊 and 😊!
+print(emoji_text("I love Python"))  # Output: ℹ️ ❤️ 🐍
+print(emoji_text("Let's have some pizza!"))  # Output: 🛴🅴🆃'💲 🅷🅰️🆅🅴 💲🅾️Ⓜ️🅴 🍕!
+print(emoji_text("I feel happy and joyful!"))  # Output: ℹ️ 🅵🅴🅴🛴 😊 🅰️🅽🅳 😊!
 print()
 
 # Example 6: Font Styling
@@ -71,43 +71,36 @@ print()
 
 print("=== Example 7: Combinations Of All  ===")
 cursive_text=font_text("Hello, World!", style="cursive")
-print(rgb_colorify(cursive_text, 64, 224, 208)) 
-print(rgb_colorify(font_text("Hello, World!", style="double_struck"), 250, 128, 114))
-print(rgb_colorify(font_text("Hello, World!", style="circled_filled"), 255, 215, 0))
-print(rainbow_text(font_text("Hello, World!", style="squared")))
-print(rgb_colorify(emoji_text("Let's have some pizza!"), 64, 224, 208 ))
-print(font_text(emoji_text("Let's have some pizza!"), style="cursive"))
+print(rgb_colorify(cursive_text, 64, 224, 208))  #Output: 𝓗𝓮𝓵𝓵𝓸, 𝓦𝓸𝓻𝓵𝓭!
+print(rgb_colorify(font_text("Hello, World!", style="double_struck"), 250, 128, 114))   #Output: ℍ𝕖𝕝𝕝𝕠, 𝕎𝕠𝕣𝕝𝕕!
+print(rgb_colorify(font_text("Hello, World!", style="circled_filled"), 255, 215, 0))   #Output: 🅗🅔🅛🅛🅞, 🅦🅞🅡🅛🅓!
+print(rainbow_text(font_text("Hello, World!", style="squared")))   #Output: 🄷🄴🄻🄻🄾, 🅆🄾🅁🄻🄳!
+print(rgb_colorify(emoji_text("Let's have some pizza!"), 64, 224, 208 ))   #Output: 🛴🅴🆃'💲 🅷🅰️🆅🅴 💲🅾️Ⓜ️🅴 🍕!
+print(font_text(emoji_text("Let's have some pizza!"), style="cursive"))   #Output: 🛴🅴🆃'💲 🅷🅰️🆅🅴 💲🅾️Ⓜ️🅴 🍕!
 print()
   
 print("=== Example 8: Emoji With Text=== ")
-print(add_emojis_With_text("I am very happy today!"))
-print(add_emojis_With_text("Lets have some pizza!"))
+print(add_emojis_With_text("I am very happy today!"))   #Output: I am very happy 😊 today!
+print(add_emojis_With_text("Lets have some pizza!"))   #Output: Lets have some pizza! 🍕
 print()
 
 print("=== Example 9: analyze_sentiment=== ")
-print(analyze_sentiment("This is a terrible day"))
-print(analyze_sentiment("I feel happy when i sing a songs"))
-print(analyze_sentiment("I hate Exams"))
-print()
-
-
-print("=== Example 10: Combining Features ===")
-
-"""
-Note : When using colorify, emojify, and fontify features simultaneously, it's important to 
-       follow the correct order of operations.
-       Apply emojis first to include them in the text, then apply font styles to transform the 
-       text, and finally add colors last to ensure the entire text
-"""
-
-text = add_emojis_With_text("I love Python and pizza!")
-styled_text = font_text(text, style="fraktur")
-colored_text = rgb_colorify(styled_text, 189, 252, 201)   # Mint
-print(colored_text)
+print(analyze_sentiment("This is a terrible day")) #Output: This is a terrible day 😢 😡 💔
+print(analyze_sentiment("I feel happy when i sing a songs"))  #Output: I feel happy when i sing a songs 😍 🎉 🔥 😃
+print(analyze_sentiment("I hate Exams"))     #Output: I hate Exams 😢 😡 💔
+print(analyze_sentiment(""))   #Output:  😐 🙂
 print()
 
 
 print("=== Example 10:Demo of text animations:=== ")
+
+"""
+Note:1)⚠️ Don't use print() to print the animations text, if u use print it will return None.
+     Ex:print(text_fire("Text Fire"))  
+     O/p:Text Fire  # Printed by text_fire()
+         None       # Printed by print()
+      2)⚠️ Animation effects require a terminal environment
+"""
 typing_animation("Hello, welcome to Python animations!")
 scrolling_text("Python makes animations fun!")
 glitch_effect("Glitchy Text!")
@@ -123,4 +116,29 @@ text_neon("Text Neon")
 text_wave("Text Wave")
 shadow_wave("Shadow Wave")
 text_3d("3D Text")
+print()
+
+
+
+print("=== Example 11: Combining Features ===")
+
+"""
+Note : When using colorify, emojify, fontify and animations features simultaneously, it's important to 
+       follow the correct order of operations.
+       Apply emojis first to include them in the text, then apply font styles to transform the 
+       text, add colors last to ensure the entire text and finally apply the animations
+"""
+
+text = add_emojis_With_text("I love Python and pizza!")
+styled_text = font_text(text, style="fraktur")
+colored_text = rgb_colorify(styled_text, 189, 252, 201)   # Mint
+
+""" 
+Note: When u use both the colorify and the color changing animations(text_fire, 3D text ,
+text_neon..)together,the animations may not work sometimes...
+
+"""
+text_fire(colored_text)  
+text2= emoji_text("Hi Everybody")
+typing_animation(text2)
 print()
