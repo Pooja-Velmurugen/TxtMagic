@@ -2,6 +2,8 @@
 #from TxtMagic import color_text, rgb_colorify, rainbow_text, background_colorify, log_message ,emoji_text ,font_text 
 from TxtMagic import *
 
+#version .1.0
+
 # Example 1: Basic Text Coloring
 print("=== Example 1: Basic Text Coloring ===")
 print(color_text("Hello, World!", "red"))
@@ -78,7 +80,8 @@ print(rainbow_text(font_text("Hello, World!", style="squared")))   #Output: 🄷
 print(rgb_colorify(emoji_text("Let's have some pizza!"), 64, 224, 208 ))   #Output: 🛴🅴🆃'💲 🅷🅰️🆅🅴 💲🅾️Ⓜ️🅴 🍕!
 print(font_text(emoji_text("Let's have some pizza!"), style="cursive"))   #Output: 🛴🅴🆃'💲 🅷🅰️🆅🅴 💲🅾️Ⓜ️🅴 🍕!
 print()
-  
+
+#version 0.1.1
 print("=== Example 8: Emoji With Text=== ")
 print(add_emojis_With_text("I am very happy today!"))   #Output: I am very happy 😊 today!
 print(add_emojis_With_text("Lets have some pizza!"))   #Output: Lets have some pizza! 🍕
@@ -141,4 +144,19 @@ text_neon..)together,the animations may not work sometimes...
 text_fire(colored_text)  
 text2= emoji_text("Hi Everybody")
 typing_animation(text2)
+print()
+
+# version 0.1.2
+
+print("=== Example 12: Blockfonts")
+print()
+print(blockfont("HI There", style="standard"))
+print()
+print(blockfont("What's up?", style="shadow"))
+print()
+print(blockfont("Welcome to  TXTMAGIC", style="bubble"))
+print()
+print(blockfont("Let's have some fun😂", style="outline"))
+print()
+print(blockfont("WOW! Amazing🤩", style="minimal"))
 print()

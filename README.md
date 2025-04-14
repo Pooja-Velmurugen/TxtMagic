@@ -1,6 +1,6 @@
 # ✨ TxtMagic
 
-**TxtMagic** is a Python package that brings to your text! Transform ordinary text into:  
+**TxtMagic** is a Python package that brings Magic✨ to your text! Transform ordinary text into:  
 🎨 **Colorful** masterpieces | 😊 **Emoji-powered** messages | ✒️ **Stylized** fonts | 🎬 **Animated** wonders 
 
 ## 🌟 Features
@@ -22,7 +22,7 @@
   - Bold, italic, underline
   - Script, fraktur, cursive
   - Subscript/superscript and more!
-  - And more!
+  - Blockfonts(Standard, bubble, shadow, minimal, outline)
 
 ### 🎬 **Animations**
 - 10+ built-in effects:
@@ -124,6 +124,10 @@ pip install TxtMagic
 <li>analyze sentiment emoji</li>
 <li>Animations(blinking_text, typing_animation,text_shadow, text_gradient and more)</li> 
 
+### Version 0.1.2
+
+<li>Initial release of blockfont() with standard ASCII styles</li>
+<li>Supported styles: standard, outline, bubble, shadow, minimal</li>
 
 ## 🤝 Contributing
 
