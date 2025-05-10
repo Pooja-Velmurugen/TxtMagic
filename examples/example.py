@@ -122,7 +122,6 @@ text_3d("3D Text")
 print()
 
 
-
 print("=== Example 11: Combining Features ===")
 
 """
@@ -152,11 +151,21 @@ print("=== Example 12: Blockfonts")
 print()
 print(blockfont("HI There", style="standard"))
 print()
-print(blockfont("What's up?", style="shadow"))
+#print(rgb_colorify(blockfont("What's up?", style="shadow")), 64, 224, 208)
 print()
 print(blockfont("Welcome to  TXTMAGIC", style="bubble"))
 print()
 print(blockfont("Let's have some fun😂", style="outline"))
 print()
 print(blockfont("WOW! Amazing🤩", style="minimal"))
+print()
+print(blockfont("This is the long text", "")) 
+print()  
+print(blockfont("This is the long text", "slant")) #pyfiglet  style
+print()
+print(blockfont("test", "banana"))
+print()    
+print(blockfont("dotmatrix", "dotmatrix"))
+print()
+print(blockfont("serif_font", "serif_font"))
 print()

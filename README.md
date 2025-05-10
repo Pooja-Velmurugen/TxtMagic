@@ -129,6 +129,11 @@ pip install TxtMagic
 <li>Initial release of blockfont() with standard ASCII styles</li>
 <li>Supported styles: standard, outline, bubble, shadow, minimal</li>
 
+### Version 0.1.3 & Version 0.1.4
+
+<li>integrated with pyfiglet font styles.</li>
+<li>custom font styles: serif, sans-serif, dotmatrix, standard, outline, bubble, shadow, minimal.</li>
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
