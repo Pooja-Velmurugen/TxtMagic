@@ -134,6 +134,11 @@ pip install TxtMagic
 <li>integrated with pyfiglet font styles.</li>
 <li>custom font styles: serif, sans-serif, dotmatrix, standard, outline, bubble, shadow, minimal.</li>
 
+### Version 0.1.5
+
+<li>fix fontify -> blockfont() text wrapping issue for the long text.</li>
+<li>Long text input now automatically wraps to the next line without breaking ASCII formatting or overflowing the terminal.</li>
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.

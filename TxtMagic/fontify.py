@@ -1,4 +1,5 @@
 import pyfiglet
+import textwrap
 
 
 FONT_STYLES = {
@@ -967,19 +968,27 @@ ASCII_STYLES = {
     # Add more custom styles if you want
 }
 
-def blockfont(text, style="standard"):
+def blockfont(text, style="standard", max_length=20):
     
     if style in ASCII_STYLES:
         # custom styles
         style_dict = ASCII_STYLES[style]
-        lines = ["" for _ in range(5)]
+        
+        # Wrap the text with boundaries
+        lines_of_text = textwrap.wrap(text, width=max_length)
+        block_lines = []
+        
+        for wrapped_text in lines_of_text:
+            lines = ["" for _ in range(5)] 
+            for char in text:
+                pattern = style_dict.get(char, ["     "] * 5)  # fallback to blank if character missing
+                for i in range(5):
+                    lines[i] += pattern[i] + "  "
+                    
+            block_lines.append("\n".join(lines))        
        
-        for char in text:
-            pattern = style_dict.get(char, ["     "] * 5)  # fallback to blank if character missing
-            for i in range(5):
-                lines[i] += pattern[i] + "  "
-       
-        return "\n".join(lines)
+        return "\n\n".join(block_lines)
+    
     else:
         # styles form pyfiglet
         try:
